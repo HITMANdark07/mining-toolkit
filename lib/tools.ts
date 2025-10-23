@@ -5,33 +5,33 @@ export class ToolsManager {
   static getRockDatabase(): RockDatabase {
     return {
       'Sedimentary': [
-        { name: 'Coal', ucs: 25, density: 1.4 },
-        { name: 'Shale', ucs: 45, density: 2.6 },
-        { name: 'Sandstone', ucs: 80, density: 2.5 },
-        { name: 'Limestone', ucs: 100, density: 2.6 }
+        { name: 'Coal', ucs: 25, density: 1.4, tensile: 1, youngs: 5, poisson: 0.4, description: 'Organic sedimentary rock' },
+        { name: 'Shale', ucs: 45, density: 2.6, tensile: 2, youngs: 10, poisson: 0.35, description: 'Fine-grained sedimentary' },
+        { name: 'Sandstone', ucs: 80, density: 2.5, tensile: 4, youngs: 20, poisson: 0.3, description: 'Sedimentary rock' },
+        { name: 'Limestone', ucs: 100, density: 2.6, tensile: 5, youngs: 30, poisson: 0.3, description: 'Carbonate rock' }
       ],
       'Igneous': [
-        { name: 'Granite', ucs: 150, density: 2.7 },
-        { name: 'Basalt', ucs: 200, density: 2.9 },
-        { name: 'Diorite', ucs: 180, density: 2.8 }
+        { name: 'Granite', ucs: 150, density: 2.7, tensile: 8, youngs: 50, poisson: 0.25, description: 'Hard igneous rock' },
+        { name: 'Basalt', ucs: 200, density: 2.9, tensile: 10, youngs: 60, poisson: 0.25, description: 'Hard volcanic rock' },
+        { name: 'Diorite', ucs: 180, density: 2.8, tensile: 9, youngs: 55, poisson: 0.25, description: 'Intermediate igneous rock' }
       ],
       'Metamorphic': [
-        { name: 'Gneiss', ucs: 130, density: 2.8 },
-        { name: 'Marble', ucs: 70, density: 2.7 },
-        { name: 'Quartzite', ucs: 250, density: 2.7 },
-        { name: 'Slate', ucs: 120, density: 2.8 },
-        { name: 'Schist', ucs: 60, density: 2.7 }
+        { name: 'Gneiss', ucs: 130, density: 2.8, tensile: 6, youngs: 40, poisson: 0.28, description: 'Foliated metamorphic rock' },
+        { name: 'Marble', ucs: 70, density: 2.7, tensile: 4, youngs: 35, poisson: 0.3, description: 'Metamorphic carbonate' },
+        { name: 'Quartzite', ucs: 250, density: 2.7, tensile: 9, youngs: 55, poisson: 0.25, description: 'Metamorphic quartz rock' },
+        { name: 'Slate', ucs: 120, density: 2.8, tensile: 5, youngs: 30, poisson: 0.3, description: 'Fine-grained metamorphic' },
+        { name: 'Schist', ucs: 60, density: 2.7, tensile: 3, youngs: 25, poisson: 0.32, description: 'Foliated metamorphic' }
       ],
       'Metallic Ores': [
-        { name: 'Iron Ore (Hematite)', ucs: 60, density: 4.8 },
-        { name: 'Manganese Ore (Balaghat)', ucs: 220, density: 3.8 },
-        { name: 'Chromite Ore (Competent)', ucs: 200, density: 4.6 },
-        { name: 'Lead-Zinc Ore (Rampura-Agucha)', ucs: 75, density: 3.5 }
+        { name: 'Iron Ore (Hematite)', ucs: 60, density: 4.8, tensile: 3, youngs: 25, poisson: 0.3, description: 'Iron oxide ore' },
+        { name: 'Manganese Ore (Balaghat)', ucs: 220, density: 3.8, tensile: 8, youngs: 45, poisson: 0.28, description: 'Manganese oxide ore' },
+        { name: 'Chromite Ore (Competent)', ucs: 200, density: 4.6, tensile: 7, youngs: 50, poisson: 0.25, description: 'Chromium oxide ore' },
+        { name: 'Lead-Zinc Ore (Rampura-Agucha)', ucs: 75, density: 3.5, tensile: 4, youngs: 30, poisson: 0.3, description: 'Sulfide ore deposit' }
       ],
       'Industrial Minerals': [
-        { name: 'Rock Salt (Halite)', ucs: 15, density: 2.2 },
-        { name: 'Potash', ucs: 22, density: 2.0 },
-        { name: 'Gypsum', ucs: 25, density: 2.3 }
+        { name: 'Rock Salt (Halite)', ucs: 15, density: 2.2, tensile: 1, youngs: 8, poisson: 0.4, description: 'Sodium chloride mineral' },
+        { name: 'Potash', ucs: 22, density: 2.0, tensile: 1.5, youngs: 10, poisson: 0.35, description: 'Potassium chloride mineral' },
+        { name: 'Gypsum', ucs: 25, density: 2.3, tensile: 2, youngs: 12, poisson: 0.3, description: 'Calcium sulfate mineral' }
       ]
     };
   }

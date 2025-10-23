@@ -1,7 +1,10 @@
 // Core utilities for mining engineering calculations
-import { Chart, ChartConfiguration, ChartOptions } from 'chart.js';
+import { Chart, ChartConfiguration, ChartOptions, registerables } from 'chart.js';
 import * as d3 from 'd3';
 import { ChartData, KPIData, SessionData, ExportOptions } from './types';
+
+// Register all Chart.js components
+Chart.register(...registerables);
 
 export class Utils {
   static formatIN(val: number | string, digits: number = 2): string {

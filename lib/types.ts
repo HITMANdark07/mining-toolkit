@@ -241,6 +241,10 @@ export interface RockProperty {
   name: string;
   ucs: number;
   density: number;
+  tensile: number;
+  youngs: number;
+  poisson: number;
+  description: string;
 }
 
 export interface RockDatabase {
