@@ -8,6 +8,7 @@ import { GeotechnicalCalculator } from './GeotechnicalCalculator';
 import { DesignCalculator } from './DesignCalculator';
 import { OperationsCalculator } from './OperationsCalculator';
 import { ToolsManager } from './ToolsManager';
+import { AboutDeveloper } from './AboutDeveloper';
 
 export const MainContent: React.FC = () => {
   const { state } = useAppContext();
@@ -26,13 +27,15 @@ export const MainContent: React.FC = () => {
         return <OperationsCalculator />;
       case 'tools':
         return <ToolsManager />;
+      case 'about':
+        return <AboutDeveloper />;
       default:
         return <Dashboard />;
     }
   };
 
   return (
-    <main className="max-w-7xl mx-auto p-6 md:p-10">
+    <main className="max-w-7xl mx-auto p-6 md:p-10 grow">
       {renderSection()}
     </main>
   );

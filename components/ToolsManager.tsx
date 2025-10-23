@@ -231,36 +231,6 @@ export const ToolsManager: React.FC = () => {
         </div>
       )}
 
-      {/* Quick Actions */}
-      <div className="bg-white rounded-lg shadow p-6">
-        <h3 className="text-xl font-semibold mb-3">Quick Actions</h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <button 
-            onClick={() => openModal('Unit Converter', <div>Unit converter content will be implemented</div>)}
-            className="bg-indigo-100 text-indigo-800 p-3 rounded-lg hover:bg-indigo-200 text-center"
-          >
-            Unit Converter
-          </button>
-          <button 
-            onClick={() => openModal('Glossary', <div>Glossary content will be implemented</div>)}
-            className="bg-purple-100 text-purple-800 p-3 rounded-lg hover:bg-purple-200 text-center"
-          >
-            Glossary
-          </button>
-          <button 
-            onClick={() => openModal('Help', <div>Help content will be implemented</div>)}
-            className="bg-orange-100 text-orange-800 p-3 rounded-lg hover:bg-orange-200 text-center"
-          >
-            Help
-          </button>
-          <button 
-            onClick={() => openModal('About', <div>About content will be implemented</div>)}
-            className="bg-cyan-100 text-cyan-800 p-3 rounded-lg hover:bg-cyan-200 text-center"
-          >
-            About
-          </button>
-        </div>
-      </div>
     </div>
   );
 };
